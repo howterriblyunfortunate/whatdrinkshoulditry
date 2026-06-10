@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Recipe</title>
+</head>
+<body>
+
+
+
+<form name = "adddrink">
+  <label for="drinkname">Drink Name: </label><br>
+  <input type="text" id="drinkname" name="drinkname" value="Input Drink Name"><br>
+
+
+  <div id="ingredient">
+  <label for="ingredient">Ingredient: </label><br>
+  <input type="text" id="ingredient" name="ingredient" value="Ingredient"><br>
+
+  <label for="amount">Amount: </label><br>
+  <input type="text" id="amount" name="amount" value="Amount"><br>
+  </div>
+  <br>
+  <button onclick="addIngredient()" value="Add Ingredient">Add Ingredient</button>
+  <br><br>
+  <input type="submit" formaction="drinkphp.php" value="Submit">
+</form> 
+
+<script>
+function addIngredient(){
+  event.preventDefault();
+  var container = document.getElementById('ingredient');
+  
+  const newElem = document.createElement("label");
+  newElem.setAttribute("for","ingredient");
+  container.appendChild(newElem);
+}
+
+</script>
+
+</body>
+</html>
